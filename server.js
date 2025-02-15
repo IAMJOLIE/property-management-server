@@ -20,7 +20,22 @@ import ownerPropertiesRoutes from "./routes/ownerPropertiesRoutes.js"
 const app= express();
 
 app.use(express.json({limit: "50mb"}));
-app.use(cors());
+
+
+const allowedOrigins = [
+    "http://localhost:5173",  
+    "https://property-managment-system.netlify.app" 
+];
+
+const corsOptions = {
+    origin: allowedOrigins,
+    credentials: true, 
+    optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
+
 
 connectDB();
 
