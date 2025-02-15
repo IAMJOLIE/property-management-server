@@ -8,7 +8,7 @@ import cors from "cors";
 import propertyRoutes from "./routes/propertyRoutes.js"
 import authRoutes from "./routes/authRoutes.js";  
 import FavoritRoutes from "./routes/FavoritRoutes.js";
-import rentRoutes from "./routes/RentRoutes.js";
+import rentRoutes from "./routes/rentRoutes.js";
 
 
 import connectDB from "./config/db.js";
